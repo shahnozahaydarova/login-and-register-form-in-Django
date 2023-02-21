@@ -1,0 +1,60 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="login-3 tab-box">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 bg-img">
+                <div class="informeson">
+                    <div class="typing">
+                        <h1>Welcome To Crimson</h1>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
+                    <div class="social-list">
+                        <div class="buttons">
+                            <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="google-bg"><i class="fa fa-google"></i></a>
+                            <a href="#" class="dribbble-bg"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 form-section">
+                <div class="login-inner-form">
+                    <div class="details">
+                        <a href="{% url 'login' %}" style="font-size: 70px; color: rgb(221,11,62);">
+                            CRIMSON
+                            <!-- <img src="{% static 'assets/img/logos/logo-2.png' %}" alt="logo"> -->
+                        </a>
+                        <h3>Create An Cccount</h3>
+                        <form action="#" method="GET">
+                            <div class="form-group form-box">
+                                <input type="text" name="name" class="form-control" placeholder="Full Name" aria-label="Full Name">
+                            </div>
+                            <div class="form-group form-box">
+                                <input type="email" name="email" class="form-control" placeholder="Email Address" aria-label="Email Address">
+                            </div>
+                            <div class="form-group form-box">
+                                <input type="password" name="password" class="form-control" autocomplete="off" placeholder="Password" aria-label="Password">
+                            </div>
+                            <div class="form-group form-box checkbox clearfix">
+                                <div class="form-check checkbox-theme">
+                                    <input class="form-check-input" type="checkbox" value="" id="termsOfService">
+                                    <label class="form-check-label" for="termsOfService">
+                                        I agree to the<a href="#" class="terms">terms of service</a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn-md btn-theme w-100">Login</button>
+                            </div>
+                            <p>Already a member?<a href="{% url 'login' %}"> Login here</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

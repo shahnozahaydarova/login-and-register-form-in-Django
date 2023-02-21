@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    
+    <title>Login and Register Form in Django</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <link type="text/css" rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'assets/fonts/font-awesome/css/font-awesome.min.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'assets/fonts/flaticon/font/flaticon.css' %}">
+
+
+    <link rel="stylesheet" type="text/css" href="{% static '../../../../../css?family=Open+Sans:400,300,600,700,800%7CPoppins:400,500,700,800,900%7CRoboto:100,300,400,400i,500,700' %}">
+    <link href="{% static '../../../../../css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap' %}" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="{% static 'assets/css/skins/default.css' %}">
+
+</head>
+<body id="top">
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TAGCODE" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div class="page_loader"></div>
+
+
+    {% block content %}
+    {% endblock content %}
+
+
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    
+</body>
+</html>
