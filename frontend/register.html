@@ -28,15 +28,24 @@
                             <!-- <img src="{% static 'assets/img/logos/logo-2.png' %}" alt="logo"> -->
                         </a>
                         <h3>Create An Cccount</h3>
-                        <form action="#" method="GET">
+                        <form action="#" method="post">
+                            {% csrf_token %}
+                            {% load widget_tweaks %}
                             <div class="form-group form-box">
-                                <input type="text" name="name" class="form-control" placeholder="Full Name" aria-label="Full Name">
+                                <!-- <input type="text" name="name" class="form-control" placeholder="Full Name" aria-label="Full Name"> -->
+                                {{ form.username|add_class:"form-control" }}
                             </div>
                             <div class="form-group form-box">
-                                <input type="email" name="email" class="form-control" placeholder="Email Address" aria-label="Email Address">
+                                <!-- <input type="email" name="email" class="form-control" placeholder="Email Address" aria-label="Email Address"> -->
+                                {{ form.email|add_class:"form-control" }}
                             </div>
                             <div class="form-group form-box">
-                                <input type="password" name="password" class="form-control" autocomplete="off" placeholder="Password" aria-label="Password">
+                                <!-- <input type="password" name="password" class="form-control" autocomplete="off" placeholder="Password" aria-label="Password"> -->
+                                {{ form.password1|add_class:"form-control" }}
+                            </div>
+                            <div class="form-group form-box">
+                                <!-- <input type="password" name="password" class="form-control" autocomplete="off" placeholder="Password" aria-label="Password"> -->
+                                {{ form.password2|add_class:"form-control" }}
                             </div>
                             <div class="form-group form-box checkbox clearfix">
                                 <div class="form-check checkbox-theme">
@@ -47,7 +56,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn-md btn-theme w-100">Login</button>
+                                <button type="submit" class="btn-md btn-theme w-100">Register</button>
                             </div>
                             <p>Already a member?<a href="{% url 'login' %}"> Login here</a></p>
                         </form>
