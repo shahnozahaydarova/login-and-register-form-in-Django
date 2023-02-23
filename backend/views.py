@@ -8,7 +8,7 @@ def register(request):
         if form.is_valid():
             form.save()
 
-            messages.success(request,"nvvvvvvvvvvvvv")
+            messages.success(request,"ro'yxatdan o'tdingiz")
             return redirect('login')
 
     else:
